@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BelajarActivity</string>
+    <string name="textView4">Email : </string>
+    <string name="textView5">Password : </string>
+    <string name="tv_email"></string>
+    <string name="tv_password"></string>
+</resources>
