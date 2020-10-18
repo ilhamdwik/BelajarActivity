@@ -17,10 +17,10 @@ public class ProfilePresenter implements ProfileContract.Presenter{
     public void start() {}
 
     @Override
-    public void performLogin(final String email, final String password){
+    public void performToLogout(){
         //proses login
         //if login success call redirect to profile
-        view.redirectToProfile();
+        view.redirectToLogin();
     }
 
 }

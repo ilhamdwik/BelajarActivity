@@ -11,8 +11,11 @@ import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 
+import java.util.List;
+
 import pens.lab.app.belajaractivity.R;
 import pens.lab.app.belajaractivity.base.BaseFragment;
+import pens.lab.app.belajaractivity.modul.list.ListActivity;
 import pens.lab.app.belajaractivity.modul.profile.ProfileActivity;
 
 
@@ -69,12 +72,23 @@ public class LoginFragment extends BaseFragment<LoginActivity, LoginContract.Pre
             Bundle bundle = new Bundle();
             bundle.putString("email", etEmail.getText().toString());
             bundle.putString("password", etPassword.getText().toString());
-            Intent intent = new Intent(activity, ProfileActivity.class);
+            Intent intent = new Intent(activity, ListActivity.class);
             intent.putExtras(bundle);
 
             startActivity(intent);
             activity.finish();
+    }
 
+    @Override
+    public void redirectToMainList() {
+        Bundle bundle = new Bundle();
+        bundle.putString("email", etEmail.getText().toString());
+        bundle.putString("password", etPassword.getText().toString());
+        Intent intent = new Intent(activity, ListActivity.class);
+        intent.putExtras(bundle);
+
+        startActivity(intent);
+        activity.finish();
     }
 
 }

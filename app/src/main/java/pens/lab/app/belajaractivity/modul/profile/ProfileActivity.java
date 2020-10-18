@@ -6,7 +6,7 @@ import pens.lab.app.belajaractivity.base.BaseFragmentHolderActivity;
 
 
 public class ProfileActivity extends BaseFragmentHolderActivity {
-    ProfileFragment loginFragment;
+    ProfileFragment profileFragment;
     private final int UPDATE_REQUEST = 2019;
 
     @Override
@@ -18,9 +18,15 @@ public class ProfileActivity extends BaseFragmentHolderActivity {
 //        ivIcon.setImageResource(R.drawable.....);
         ivIcon.setVisibility(View.VISIBLE);
 
-        loginFragment = new ProfileFragment();
-        setCurrentFragment(loginFragment, false);
+        profileFragment = new ProfileFragment();
+        setCurrentFragment(profileFragment, false);
 
+        btBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                profileFragment.redirectToLogin();
+            }
+        });
     }
 
 

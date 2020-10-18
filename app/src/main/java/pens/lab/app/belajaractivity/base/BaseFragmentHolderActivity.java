@@ -7,6 +7,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.Toolbar;
+
 import pens.lab.app.belajaractivity.R;
 
 
@@ -19,6 +21,7 @@ public abstract class BaseFragmentHolderActivity extends BaseActivity {
     protected ImageButton btBack;
     protected View vMenuBarShadow;
     protected RelativeLayout rlActivityFragmentHolder;
+    protected Toolbar mToolbar;
 
     @Override
     protected void initializeView() {
@@ -30,7 +33,7 @@ public abstract class BaseFragmentHolderActivity extends BaseActivity {
         btBack = (ImageButton) findViewById(R.id.btBack);
         vMenuBarShadow = findViewById(R.id.vMenuBarShadow);
         rlActivityFragmentHolder = (RelativeLayout) findViewById(R.id.rlActivityFragmentHolder);
-
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
         btBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
